@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\simeon.y.garcia\\source\\repos\\CustomerManagementSystem\\BasicCSharp\\BasicCSharp.csproj",
+      "projectUniqueName": "C:\\asp-net-core-01-12-20\\CustomerManagementSystem\\BasicCSharp\\BasicCSharp.csproj",
       "projectName": "BasicCSharp",
-      "projectPath": "C:\\Users\\simeon.y.garcia\\source\\repos\\CustomerManagementSystem\\BasicCSharp\\BasicCSharp.csproj",
+      "projectPath": "C:\\asp-net-core-01-12-20\\CustomerManagementSystem\\BasicCSharp\\BasicCSharp.csproj",
       "packagesPath": "C:\\Users\\simeon.y.garcia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\simeon.y.garcia\\source\\repos\\CustomerManagementSystem\\BasicCSharp\\obj\\",
+      "outputPath": "C:\\asp-net-core-01-12-20\\CustomerManagementSystem\\BasicCSharp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
