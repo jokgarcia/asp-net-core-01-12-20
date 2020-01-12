@@ -9,3 +9,14 @@ C:\Users\simeon.y.garcia\source\repos\CustomerManagementSystem\BasicCSharp\obj\D
 C:\Users\simeon.y.garcia\source\repos\CustomerManagementSystem\BasicCSharp\obj\Debug\netcoreapp3.0\BasicCSharp.dll
 C:\Users\simeon.y.garcia\source\repos\CustomerManagementSystem\BasicCSharp\obj\Debug\netcoreapp3.0\BasicCSharp.pdb
 C:\Users\simeon.y.garcia\source\repos\CustomerManagementSystem\BasicCSharp\obj\Debug\netcoreapp3.0\BasicCSharp.csprojAssemblyReference.cache
+C:\asp-net-core-01-12-20\CustomerManagementSystem\BasicCSharp\bin\Debug\netcoreapp3.0\BasicCSharp.exe
+C:\asp-net-core-01-12-20\CustomerManagementSystem\BasicCSharp\bin\Debug\netcoreapp3.0\BasicCSharp.deps.json
+C:\asp-net-core-01-12-20\CustomerManagementSystem\BasicCSharp\bin\Debug\netcoreapp3.0\BasicCSharp.runtimeconfig.json
+C:\asp-net-core-01-12-20\CustomerManagementSystem\BasicCSharp\bin\Debug\netcoreapp3.0\BasicCSharp.runtimeconfig.dev.json
+C:\asp-net-core-01-12-20\CustomerManagementSystem\BasicCSharp\bin\Debug\netcoreapp3.0\BasicCSharp.dll
+C:\asp-net-core-01-12-20\CustomerManagementSystem\BasicCSharp\bin\Debug\netcoreapp3.0\BasicCSharp.pdb
+C:\asp-net-core-01-12-20\CustomerManagementSystem\BasicCSharp\obj\Debug\netcoreapp3.0\BasicCSharp.csprojAssemblyReference.cache
+C:\asp-net-core-01-12-20\CustomerManagementSystem\BasicCSharp\obj\Debug\netcoreapp3.0\BasicCSharp.AssemblyInfoInputs.cache
+C:\asp-net-core-01-12-20\CustomerManagementSystem\BasicCSharp\obj\Debug\netcoreapp3.0\BasicCSharp.AssemblyInfo.cs
+C:\asp-net-core-01-12-20\CustomerManagementSystem\BasicCSharp\obj\Debug\netcoreapp3.0\BasicCSharp.dll
+C:\asp-net-core-01-12-20\CustomerManagementSystem\BasicCSharp\obj\Debug\netcoreapp3.0\BasicCSharp.pdb
