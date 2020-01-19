@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace BasicCSharp.Models
+namespace CustomerManagement.Web.Models
 {
     public class Customer
     {

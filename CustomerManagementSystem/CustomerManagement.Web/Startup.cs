@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CustomerManagement.Web.Context;
+using CustomerManagement.Web.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -28,6 +29,8 @@ namespace CustomerManagement.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<CustomerManagementDB>(options => options.UseSqlServer(_configuration.GetConnectionString("CustomerDBConnection")));
+            services.AddScoped<IRepositoryLayer, RepositoryLayer>();
+
             services.AddRazorPages();
             services.AddMvc();
         }

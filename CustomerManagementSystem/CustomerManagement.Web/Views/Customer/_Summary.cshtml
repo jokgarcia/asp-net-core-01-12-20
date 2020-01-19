@@ -1,0 +1,24 @@
+﻿@model CustomerManagement.Web.Models.Customer
+
+@if (Model.IsActive == false)
+{
+    <tr class="danger">
+        <td>@Model.FirstName</td>
+        <td>@Model.LastName</td>
+        <td style="color:red">Inactive</td>
+    </tr>
+}
+else
+{
+    <tr class="success">
+        <td>@Model.FirstName</td>
+        <td>@Model.LastName</td>
+        <td><a asp-action="Edit" asp-route-id="@Model.Id" 
+               asp-route-FirstName="@Model.FirstName" 
+               asp-route-LastName="@Model.LastName">Edit
+            </a>
+        </td>
+    </tr>
+}
+
+

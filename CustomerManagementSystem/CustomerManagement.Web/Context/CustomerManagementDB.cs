@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BasicCSharp.Models;
+using CustomerManagement.Web.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace CustomerManagement.Web.Context

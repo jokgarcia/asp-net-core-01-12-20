@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BasicCSharp.Models
+namespace CustomerManagement.Web.Models
 {
     public class Computation : Customer
     {
