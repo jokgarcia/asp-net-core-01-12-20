@@ -8,7 +8,7 @@ namespace BasicCSharp
         static void Main(string[] args)
         {
             //Instantiate
-            var computation = new Computation();
+                var computation = new Computation(); 
 
             Console.Write("Enter Area : ");
             var area = Console.ReadLine();
