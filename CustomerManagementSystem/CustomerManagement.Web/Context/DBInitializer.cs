@@ -8,7 +8,7 @@ namespace CustomerManagement.Web.Context
 {
     public static class DBInitializer
     {
-        public static void Initialize(CustomerManagementDB context)
+        public static void Initialize(CustomerManagementContext context)
         {
             context.Database.EnsureCreated();
 

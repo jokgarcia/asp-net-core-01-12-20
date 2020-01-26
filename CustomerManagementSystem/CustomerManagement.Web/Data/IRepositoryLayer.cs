@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using CustomerManagement.Web.Models;
-using CustomerManagement.Web.ViewModels;
 
 namespace CustomerManagement.Web.Data
 {
     public interface IRepositoryLayer
     {
-        bool AddCustomer(CustomerViewModel request);
+        Customer AddCustomer(Customer customer);
         IEnumerable<Customer> GetCustomers();
+        IEnumerable<Customer> SearchCustomer(string search);
+        Customer UpdateCustomer(Customer customer);
     }
 }

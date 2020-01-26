@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using CustomerManagement.Web.Context;
 using CustomerManagement.Web.Data;
+using CustomerManagement.Web.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -28,42 +30,55 @@ namespace CustomerManagement.Web
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<CustomerManagementDB>(options => options.UseSqlServer(_configuration.GetConnectionString("CustomerDBConnection")));
+            services.AddDbContext<CustomerManagementContext>(options => options.UseSqlServer(_configuration.GetConnectionString("CustomerDBConnection")));
             services.AddScoped<IRepositoryLayer, RepositoryLayer>();
 
+
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+           .AddEntityFrameworkStores<CustomerManagementContext>()
+           .AddDefaultTokenProviders();
+
             services.AddRazorPages();
-            services.AddMvc();
+            services.AddMvc(options => options.EnableEndpointRouting = false);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
-                              CustomerManagementDB context)
+                              CustomerManagementContext context)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseAuthentication();
             app.UseRouting();
             app.UseStaticFiles();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+            app.UseMvc(ConfigureRoutes);
 
-                endpoints.MapControllerRoute(
-                   name: "default",
-                   pattern: "{controller=Home}/{action=Index}/{id?}");
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapGet("/", async context =>
+            //    {
+            //        await context.Response.WriteAsync("Hello World!");
+            //    });
 
-                endpoints.MapRazorPages();
-            });
+            //    endpoints.MapControllerRoute(
+            //       name: "default",
+            //       pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            //    endpoints.MapRazorPages();
+            //});
 
             DBInitializer.Initialize(context);
         }
 
-      
+        private void ConfigureRoutes(IRouteBuilder routeBuilder)
+        {
+            routeBuilder.MapRoute("Default", "{controller=Home}/{action=Index}/{id?}");
+        }
+
     }
 }

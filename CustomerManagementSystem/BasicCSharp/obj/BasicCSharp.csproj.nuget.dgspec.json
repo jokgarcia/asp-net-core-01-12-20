@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\asp-net-core-01-12-20\\CustomerManagementSystem\\BasicCSharp\\BasicCSharp.csproj": {}
+    "C:\\PoC\\CustomerManagementSystem\\BasicCSharp\\BasicCSharp.csproj": {}
   },
   "projects": {
-    "C:\\asp-net-core-01-12-20\\CustomerManagementSystem\\BasicCSharp\\BasicCSharp.csproj": {
+    "C:\\PoC\\CustomerManagementSystem\\BasicCSharp\\BasicCSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\asp-net-core-01-12-20\\CustomerManagementSystem\\BasicCSharp\\BasicCSharp.csproj",
+        "projectUniqueName": "C:\\PoC\\CustomerManagementSystem\\BasicCSharp\\BasicCSharp.csproj",
         "projectName": "BasicCSharp",
-        "projectPath": "C:\\asp-net-core-01-12-20\\CustomerManagementSystem\\BasicCSharp\\BasicCSharp.csproj",
+        "projectPath": "C:\\PoC\\CustomerManagementSystem\\BasicCSharp\\BasicCSharp.csproj",
         "packagesPath": "C:\\Users\\simeon.y.garcia\\.nuget\\packages\\",
-        "outputPath": "C:\\asp-net-core-01-12-20\\CustomerManagementSystem\\BasicCSharp\\obj\\",
+        "outputPath": "C:\\PoC\\CustomerManagementSystem\\BasicCSharp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

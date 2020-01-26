@@ -31,12 +31,41 @@ namespace CustomerManagement.Web.Controllers
             return View(viewModel);
         }
 
-        //[HttpGet]
-        //public IActionResult Edit(int id,string FirstName,string LastName)
-        //{
+        [HttpPost]
+        public IActionResult AddCustomer(Customer customer)
+        {
 
-        //    return View();
-        //}
+            if (ModelState.IsValid)
+            {
+                var newRoom = new Customer();
+                //newRoom.RoomNo = room.RoomNo;
+                //newRoom.RoomType = room.RoomType;
+                //newRoom.Rate = room.Rate;
+                //newRoom.RoomStatus = "Available";
+
+                //newRoom = _reservationData.AddRoom(newRoom);
+
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int Id, string FirstName, string LastName, string Address, string Email, string PhoneNumber)
+        {
+            ViewData["Id"] = Id;
+            ViewData["FirstName"] = FirstName;
+            ViewData["LastName"] = LastName;
+            ViewData["Address"] = Address;
+            ViewData["Email"] = Email;
+            ViewData["Address"] = Address;
+            ViewData["PhoneNumber"] = PhoneNumber;
+
+            return View();
+        }
 
         [HttpPost]
         public IActionResult Edit(Customer customer)
