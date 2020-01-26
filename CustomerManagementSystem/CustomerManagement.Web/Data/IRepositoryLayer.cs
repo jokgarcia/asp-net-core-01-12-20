@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using CustomerManagement.Web.Models;
+﻿using CustomerManagement.Web.Models;
+using System.Collections.Generic;
 
 namespace CustomerManagement.Web.Data
 {
@@ -7,9 +7,8 @@ namespace CustomerManagement.Web.Data
     {
         Customer AddCustomer(Customer customer);
         IEnumerable<Customer> GetCustomers();
+        IEnumerable<Supplier> GetSuppliers();
         IEnumerable<Customer> SearchCustomer(string search);
         Customer UpdateCustomer(Customer customer);
-
-        IEnumerable<Supplier> GetSuppliers();
     }
 }
