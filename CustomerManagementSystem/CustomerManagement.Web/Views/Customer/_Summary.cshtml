@@ -14,8 +14,10 @@ else
         <td>@Model.FirstName</td>
         <td>@Model.LastName</td>
         <td>
-            <a asp-action="Edit" asp-route-Id="@Model.Id" asp-route-FirstName="@Model.FirstName" asp-route-LastName="@Model.LastName" 
-               asp-route-Email="@Model.Email" asp-route-Address="@Model.Address" asp-route-PhoneNumber="@Model.PhoneNumber" >Edit
+            <a asp-action="Edit" asp-route-Id="@Model.Id" asp-route-FirstName="@Model.FirstName" 
+               asp-route-LastName="@Model.LastName" 
+               asp-route-Email="@Model.Email" asp-route-Address="@Model.Address" 
+               asp-route-PhoneNumber="@Model.PhoneNumber" >Edit
             </a>
         </td>
     </tr>

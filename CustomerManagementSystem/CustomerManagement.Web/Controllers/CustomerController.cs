@@ -70,7 +70,13 @@ namespace CustomerManagement.Web.Controllers
         [HttpPost]
         public IActionResult Edit(Customer customer)
         {
-            return View();
+            if (ModelState.IsValid) 
+            {
+                customer.IsActive = true;
+                repositoryLayer.UpdateCustomer(customer);
+            }
+
+            return RedirectToAction(nameof(Index));
         }
 
     }
