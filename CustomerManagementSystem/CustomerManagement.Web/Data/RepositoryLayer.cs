@@ -80,14 +80,5 @@ namespace CustomerManagement.Web.Data
             return product;
         }
     }
-        public IEnumerable<Department> GetDepartments()
-        {
-            return context.Departments.ToList();
-        }
-        public IEnumerable<Product> GetProducts()
-        {
-            return context.Products.ToList();
-        }
-    }
 
 }
