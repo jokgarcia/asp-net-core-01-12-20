@@ -11,6 +11,6 @@
     <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
     <ShowAllFiles>true</ShowAllFiles>
     <WebStackScaffolding_LayoutPageFile>~/Views/Shared/_Layout.cshtml</WebStackScaffolding_LayoutPageFile>
-    <NameOfLastUsedPublishProfile>CustomProfile1</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>CustomProfile2</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>
