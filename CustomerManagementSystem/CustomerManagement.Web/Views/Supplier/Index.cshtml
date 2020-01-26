@@ -1,8 +1,62 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿@model CustomerManagement.Web.ViewModels.SupplierViewModel;
 
-<h2>Index</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Supplier Name</th>
+            <th>Email Address</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var supplier in Model.Suppliers)
+        {
+            @Html.Partial("_Summary", supplier)
+        }
+    </tbody>
+
+</table>
+
+<div>
+    <a asp-action="AddSupplier">Add Supplier</a>
+</div>
+
+<div>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add Supplier</button>
+</div>
+<form method="post" action="Supplier/AddSupplier">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add Supplier</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label asp-for=@Model.Supplier.SupplierName></label>
+                        <input class="form-control" asp-for=@Model.Supplier.SupplierName />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for=@Model.Supplier.Email></label>
+                        <input class="form-control" asp-for=@Model.Supplier.Email />
+                    </div>
+
+                   
+                    <input class="btn btn-default" type="submit" name="Save" value="Save" />
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
 

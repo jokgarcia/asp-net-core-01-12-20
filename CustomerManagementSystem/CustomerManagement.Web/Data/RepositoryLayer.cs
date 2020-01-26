@@ -51,5 +51,21 @@ namespace CustomerManagement.Web.Data
         {
             return context.Suppliers.ToList();
         }
+
+        public Supplier AddSupplier(Supplier supplier)
+        {
+
+            context.Suppliers.Add(supplier);
+            context.SaveChanges();
+
+            return supplier;
+        }
+
+        public Supplier UpdateSupplier(Supplier supplier)
+        {
+            context.Attach(supplier).State = EntityState.Modified;
+            context.SaveChanges();
+            return supplier;
+        }
     }
 }
