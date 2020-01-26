@@ -79,6 +79,19 @@ namespace CustomerManagement.Web.Data
             context.SaveChanges();
             return product;
         }
+        public Supplier AddSupplier(Supplier supplier)
+        {
+            context.Suppliers.Add(supplier);
+            context.SaveChanges();
+            return supplier;
+        }
+
+        public Supplier UpdateSupplier(Supplier supplier)
+        {
+            context.Attach(supplier).State = EntityState.Modified;
+            context.SaveChanges();
+            return supplier;
+        }
     }
 
 }

@@ -1,5 +1,5 @@
-﻿using CustomerManagement.Web.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using CustomerManagement.Web.Models;
 
 namespace CustomerManagement.Web.Data
 {
@@ -7,17 +7,14 @@ namespace CustomerManagement.Web.Data
     {
         Customer AddCustomer(Customer customer);
         Product AddProduct(Product product);
+        Supplier AddSupplier(Supplier supplier);
         IEnumerable<Customer> GetCustomers();
         IEnumerable<Product> GetProducts();
         IEnumerable<Supplier> GetSuppliers();
         IEnumerable<Customer> SearchCustomer(string search);
         IEnumerable<Product> SearchProduct(string search);
         Customer UpdateCustomer(Customer customer);
-        
-        // Supplier Interface
-        IEnumerable<Supplier> GetSuppliers();
-        Supplier AddSupplier(Supplier supplier);
-        Supplier UpdateSupplier(Supplier supplier);
         Product UpdateProduct(Product product);
+        Supplier UpdateSupplier(Supplier supplier);
     }
 }

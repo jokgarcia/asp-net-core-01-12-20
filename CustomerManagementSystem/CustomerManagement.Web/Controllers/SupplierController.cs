@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CustomerManagement.Web.Controllers
 {
+    [Authorize]
     public class SupplierController : Controller
     {
         private IRepositoryLayer repositoryLayer;

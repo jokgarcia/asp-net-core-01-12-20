@@ -44,7 +44,7 @@ namespace CustomerManagement.Web.Controllers
             //}
             //else
             //{
-            model.Customer = repositoryLayer.SearchCustomer(customer.SearchString);
+            //model.Customer = repositoryLayer.SearchCustomer(customer.SearchString);
             //}
             return View(model);
         }
