@@ -1,0 +1,43 @@
+﻿
+@using CustomerManagement.Web.Models
+
+@model Customer
+
+@{
+    @ViewBag.Title
+}
+
+<h1>Add Room</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for=@Model.FirstName></label>
+        <input class="form-control" asp-for=@Model.FirstName />
+    </div>
+
+    <div class="form-group">
+        <label asp-for=@Model.LastName></label>
+        <select class="form-control" asp-for="@Model.LastName">
+            <option value="Single">Single</option>
+            <option value="Double">Double</option>
+            <option value="Family">Family</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for=@Model.PhoneNumber></label>
+        <input class="form-control" asp-for=@Model.PhoneNumber />
+    </div>
+
+    <div class="form-group">
+        <label asp-for=@Model.Email></label>
+        <input class="form-control" asp-for=@Model.Email />
+    </div>
+
+    <div class="form-group">
+        <label asp-for=@Model.Address></label>
+        <input class="form-control" asp-for=@Model.Address />
+    </div>
+
+    <input class="btn btn-default" type="submit" name="Save" value="Save" />
+</form>

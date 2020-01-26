@@ -7,6 +7,7 @@ using CustomerManagement.Web.Data;
 using CustomerManagement.Web.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CustomerManagement.Web.Controllers
 {
@@ -20,6 +21,7 @@ namespace CustomerManagement.Web.Controllers
         }
 
         // GET: Customer
+        //[Authorize]
         public IActionResult Index()
         {
             var viewModel = new CustomerViewModel();
@@ -31,20 +33,20 @@ namespace CustomerManagement.Web.Controllers
             return View(viewModel);
         }
 
+        [HttpGet]
+        public IActionResult AddCustomer() 
+        {
+            return View();
+        }
+
         [HttpPost]
         public IActionResult AddCustomer(Customer customer)
         {
 
             if (ModelState.IsValid)
             {
-                var newRoom = new Customer();
-                //newRoom.RoomNo = room.RoomNo;
-                //newRoom.RoomType = room.RoomType;
-                //newRoom.Rate = room.Rate;
-                //newRoom.RoomStatus = "Available";
-
-                //newRoom = _reservationData.AddRoom(newRoom);
-
+                customer.IsActive = true;
+                repositoryLayer.AddCustomer(customer);
                 return RedirectToAction(nameof(Index));
             }
             else
@@ -53,6 +55,7 @@ namespace CustomerManagement.Web.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Edit(int Id, string FirstName, string LastName, string Address, string Email, string PhoneNumber)
         {

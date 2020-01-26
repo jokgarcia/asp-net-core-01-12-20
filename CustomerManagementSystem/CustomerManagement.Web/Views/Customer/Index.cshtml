@@ -1,19 +1,77 @@
 ﻿@model CustomerManagement.Web.ViewModels.CustomerViewModel;
 
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        
-        <tbody>
-            @foreach (var customer in Model.Customers)
-            {
-                @Html.Partial("_Summary", customer)
-            }
-        </tbody>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
 
-    </table>
+    <tbody>
+        @foreach (var customer in Model.Customers)
+        {
+            @Html.Partial("_Summary", customer)
+        }
+    </tbody>
+
+</table>
+
+@*<div>
+    <a asp-action="AddCustomer">Add Customer</a>
+</div>*@
+
+<div>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add Customer</button>
+</div>
+
+<form method="post" action="Customer/AddCustomer">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add Customer</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label asp-for=@Model.Customer.FirstName></label>
+                        <input class="form-control" asp-for=@Model.Customer.FirstName />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for=@Model.Customer.LastName></label>
+                        <input class="form-control" asp-for=@Model.Customer.LastName />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for=@Model.Customer.PhoneNumber></label>
+                        <input class="form-control" asp-for=@Model.Customer.PhoneNumber />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for=@Model.Customer.Email></label>
+                        <input class="form-control" asp-for=@Model.Customer.Email />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for=@Model.Customer.Address></label>
+                        <input class="form-control" asp-for=@Model.Customer.Address />
+                    </div>
+
+                    <input class="btn btn-default" type="submit" name="Save" value="Save" />
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+

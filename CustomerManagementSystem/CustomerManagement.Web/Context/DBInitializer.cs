@@ -12,18 +12,18 @@ namespace CustomerManagement.Web.Context
         {
             context.Database.EnsureCreated();
 
-            var customer = new Customer()
-            {
-                FirstName = "Jok",
-                LastName = "Garcia",
-                Address = "Q.C",
-                Email = "jok@email.com",
-                PhoneNumber = "777-555-444",
-                IsActive = true
-            };
+            //var customer = new Customer()
+            //{
+            //    FirstName = "Jok",
+            //    LastName = "Garcia",
+            //    Address = "Q.C",
+            //    Email = "jok@email.com",
+            //    PhoneNumber = "777-555-444",
+            //    IsActive = true
+            //};
 
-            context.Customers.Add(customer);
-            context.SaveChanges();
+            //context.Customers.Add(customer);
+            //context.SaveChanges();
         }
     }
 }
