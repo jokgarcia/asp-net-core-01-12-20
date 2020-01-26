@@ -46,5 +46,10 @@ namespace CustomerManagement.Web.Data
             context.SaveChanges();
             return customer;
         }
+
+        public IEnumerable<Supplier> GetSuppliers()
+        {
+            return context.Suppliers.ToList();
+        }
     }
 }
