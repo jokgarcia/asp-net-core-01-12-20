@@ -32,5 +32,7 @@ namespace CustomerManagement.Web.Context
         public DbSet<Supplier> Suppliers { get; set; }
 
         public DbSet<Department> Departments { get; set; }
+
+        public DbSet<Product> Products { get; set; }
     }
 }

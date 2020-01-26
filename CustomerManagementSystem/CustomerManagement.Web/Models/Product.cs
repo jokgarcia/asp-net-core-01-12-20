@@ -9,8 +9,10 @@ namespace CustomerManagement.Web.Models
     public class Product
     {
         //Attributes and Data types
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string PRoductName { get; set; }
+        public string ProductName { get; set; }
         public string Description { get; set; }
         public string SupplierName { get; set; }
     }
