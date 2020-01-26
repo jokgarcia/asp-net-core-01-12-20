@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using CustomerManagement.Web.Models;
+﻿using CustomerManagement.Web.Models;
+using System.Collections.Generic;
 
 namespace CustomerManagement.Web.Data
 {

@@ -1,0 +1,23 @@
+﻿@model CustomerManagement.Web.Models.Department  
+
+@if (Model.IsActive == false)
+{
+    <tr class="danger">
+        <td>@Model.DepartmentName</td>
+        <td>@Model.Manager</td>
+        <td style="color:red">Inactive</td>
+    </tr>
+}
+else
+{
+    <tr class="success">
+        <td>@Model.DepartmentName</td>
+        <td>@Model.Manager </td>
+        <td>
+            <a asp-action="Edit" asp-route-Id="@Model.Id" asp-route-departmentName="@Model.DepartmentName"
+               asp-route-Manager="@Model.Manager"> Edit
+            </a>
+        </td>
+    </tr>
+}
+
