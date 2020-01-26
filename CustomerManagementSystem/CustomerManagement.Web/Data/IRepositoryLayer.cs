@@ -1,18 +1,16 @@
-﻿using System.Collections.Generic;
-using CustomerManagement.Web.Models;
+﻿using CustomerManagement.Web.Models;
+using System.Collections.Generic;
 
 namespace CustomerManagement.Web.Data
 {
     public interface IRepositoryLayer
     {
         Customer AddCustomer(Customer customer);
+        Supplier AddSupplier(Supplier supplier);
         IEnumerable<Customer> GetCustomers();
+        IEnumerable<Supplier> GetSuppliers();
         IEnumerable<Customer> SearchCustomer(string search);
         Customer UpdateCustomer(Customer customer);
-        
-        // Supplier Interface
-        IEnumerable<Supplier> GetSuppliers();
-        Supplier AddSupplier(Supplier supplier);
         Supplier UpdateSupplier(Supplier supplier);
     }
 }
