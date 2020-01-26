@@ -29,6 +29,8 @@ namespace CustomerManagement.Web.Context
 
         public DbSet<Order> Orders { get; set; }
 
+        public DbSet<Supplier> Suppliers { get; set; }
+
         public DbSet<Department> Departments { get; set; }
     }
 }

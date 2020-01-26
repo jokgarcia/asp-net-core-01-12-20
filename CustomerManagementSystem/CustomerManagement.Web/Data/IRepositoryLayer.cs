@@ -9,5 +9,7 @@ namespace CustomerManagement.Web.Data
         IEnumerable<Customer> GetCustomers();
         IEnumerable<Customer> SearchCustomer(string search);
         Customer UpdateCustomer(Customer customer);
+
+        IEnumerable<Supplier> GetSuppliers();
     }
 }
