@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicCSharp", "BasicCSharp\BasicCSharp.csproj", "{0F0D8399-AC06-4139-891D-BC000C9EC850}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManagement.Web", "CustomerManagement.Web\CustomerManagement.Web.csproj", "{645693B6-9125-44C2-ABDF-1B666BFF73FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerManagement.Web", "CustomerManagement.Web\CustomerManagement.Web.csproj", "{645693B6-9125-44C2-ABDF-1B666BFF73FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
