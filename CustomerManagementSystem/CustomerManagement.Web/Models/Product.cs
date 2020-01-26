@@ -15,5 +15,6 @@ namespace CustomerManagement.Web.Models
         public string ProductName { get; set; }
         public string Description { get; set; }
         public string SupplierName { get; set; }
+        public bool IsActive { get; set; }
     }
 }

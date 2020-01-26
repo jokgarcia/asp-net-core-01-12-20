@@ -1,0 +1,24 @@
+﻿@model CustomerManagement.Web.Models.Product
+
+<h1>Edit @ViewData["Product"]</h1>
+
+<form method="post">
+    <input type="hidden" asp-for=@Model.Id value=@ViewData["Id"] />
+    <div class="form-group">
+        <label asp-for=@Model.ProductName></label>
+        <input asp-for=@Model.ProductName value=@ViewData["ProductName"] />
+    </div>
+
+    <div class="form-group">
+        <label asp-for=@Model.Description></label>
+        <input asp-for=@Model.Description value=@ViewData["Description"] />
+    </div>
+
+    <div class="form-group">
+        <label asp-for=@Model.SupplierName></label>
+        <input asp-for=@Model.SupplierName value=@ViewData["SupplierName"] />
+    </div>
+
+    <input class="btn btn-default" type="submit" name="Update" value="Update" />
+
+</form>

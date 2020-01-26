@@ -1,5 +1,19 @@
 ﻿@model CustomerManagement.Web.ViewModels.CustomerViewModel;
 
+
+    <form asp-controller="Customer" asp-action="Index">
+        <select asp-for="@Model.SearchString">
+            <option value="">All</option>
+            <option value="Paid">Paid</option>
+            <option value="Reserved">Reserved</option>
+        </select>
+        <input type="submit" value="Filter" />
+        <p>
+            <input type="text" name="SearchString">
+            <input type="submit" value="Filter" />
+        </p>
+    </form>
+
 <table class="table table-bordered">
     <thead>
         <tr>

@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace CustomerManagement.Web.ViewModels
 {
-    public class CustomerViewModel
+    public class ProductViewModel
     {
-      public IEnumerable<Customer> Customers { get; set; }
-        public Customer Customer { get; set; }
-
-        public string SearchString { get; set; }
+        public IEnumerable<Product> Products { get; set; }
+        public Product Product { get; set; }
     }
 }

@@ -37,7 +37,7 @@ namespace CustomerManagement.Web.Data
             var result = from c in context.Customers
                          where (c.FirstName.Contains(search))
                          select c;
-            return result;
+            return result.ToList();
         }
 
         public Customer UpdateCustomer(Customer customer)
@@ -52,12 +52,37 @@ namespace CustomerManagement.Web.Data
             return context.Suppliers.ToList();
         }
 
-        public Supplier AddSupplier(Supplier supplier)
+        public Product AddProduct(Product product)
         {
-
-            context.Suppliers.Add(supplier);
+            context.Products.Add(product);
             context.SaveChanges();
 
+            return product;
+        }
+
+        public IEnumerable<Product> GetProducts()
+        {
+            return context.Products.ToList();
+        }
+
+        public IEnumerable<Product> SearchProduct(string search)
+        {
+            var result = from p in context.Products
+                         where (p.ProductName.Contains(search))
+                         select p;
+            return result;
+        }
+
+        public Product UpdateProduct(Product product)
+        {
+            context.Attach(product).State = EntityState.Modified;
+            context.SaveChanges();
+            return product;
+        }
+        public Supplier AddSupplier(Supplier supplier)
+        {
+            context.Suppliers.Add(supplier);
+            context.SaveChanges();
             return supplier;
         }
 
@@ -68,4 +93,5 @@ namespace CustomerManagement.Web.Data
             return supplier;
         }
     }
+
 }

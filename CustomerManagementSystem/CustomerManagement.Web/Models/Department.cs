@@ -14,5 +14,6 @@ namespace CustomerManagement.Web.Models
         public int Id { get; set; }
         public string DepartmentName { get; set; }
         public string Manager { get; set; }
+        public bool IsActive { get; set; }
     }
 }

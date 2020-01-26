@@ -1,8 +1,67 @@
-﻿
-@{
-    ViewData["Title"] = "Product";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿@model CustomerManagement.Web.ViewModels.ProductViewModel;
 
-<h2>Product</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+    </thead>
 
+    <tbody>
+        @foreach (var product in Model.Products)
+        {
+            @Html.Partial("_Summary", product)
+        }
+    </tbody>
+
+</table>
+
+@*<div>
+        <a asp-action="AddCustomer">Add Customer</a>
+    </div>*@
+
+<div>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add Product</button>
+</div>
+
+<form method="post" action="Product/AddProduct">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add Product</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label asp-for=@Model.Product.ProductName></label>
+                        <input class="form-control" asp-for=@Model.Product.ProductName />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for=@Model.Product.Description></label>
+                        <input class="form-control" asp-for=@Model.Product.Description />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for=@Model.Product.SupplierName></label>
+                        <input class="form-control" asp-for=@Model.Product.SupplierName />
+                    </div>
+
+
+                    <input class="btn btn-default" type="submit" name="Save" value="Save" />
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
