@@ -1,0 +1,14 @@
+﻿@model CustomerManagement.Web.Models.Supplier;
+
+    <tr>
+        <td>@Model.SupplierName</td>
+        <td>@Model.Email</td>
+        <td>
+            <a asp-action="Edit" asp-route-Id="@Model.Id" asp-route-SupplierName="@Model.SupplierName"
+               asp-route-Email="@Model.Email">
+                Edit
+            </a>
+        </td>
+    </tr>
+
+

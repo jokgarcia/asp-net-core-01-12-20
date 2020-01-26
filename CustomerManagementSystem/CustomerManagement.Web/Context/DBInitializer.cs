@@ -12,48 +12,48 @@ namespace CustomerManagement.Web.Context
         {
             context.Database.EnsureCreated();
 
-            var customer = new Customer()
-            {
-                FirstName = "Jok",
-                LastName = "Garcia",
-                Address = "Q.C",
-                Email = "jok@email.com",
-                PhoneNumber = "777-555-444",
-                IsActive = true
-            };
+            //var customer = new Customer()
+            //{
+            //    FirstName = "Jok",
+            //    LastName = "Garcia",
+            //    Address = "Q.C",
+            //    Email = "jok@email.com",
+            //    PhoneNumber = "777-555-444",
+            //    IsActive = true
+            //};
 
-            context.Customers.Add(customer);
-            context.SaveChanges();
+            //context.Customers.Add(customer);
+            //context.SaveChanges();
 
-            var supplier = new Supplier()
-            {
-                SupplierName = "Samsung",
-                Email = "samsung@email.com"
-            };
+            //var supplier = new Supplier()
+            //{
+            //    SupplierName = "Samsung",
+            //    Email = "samsung@email.com"
+            //};
 
-            context.Suppliers.Add(supplier);
-            context.SaveChanges();
+            //context.Suppliers.Add(supplier);
+            //context.SaveChanges();
 
-            //DEPT
-            var dept = new Department()
-            {
-                DepartmentName = "Accounting",
-                Manager = "Mr. Reyes"
-            };
+            ////DEPT
+            //var dept = new Department()
+            //{
+            //    DepartmentName = "Accounting",
+            //    Manager = "Mr. Reyes"
+            //};
 
-            context.Departments.Add(dept);
-            context.SaveChanges();
+            //context.Departments.Add(dept);
+            //context.SaveChanges();
 
-            //Product
-            var prod = new Product()
-            {
-                ProductName = "Smsung S10",
-                Description = "Phone",
-                SupplierName = "Samsung"
-            };
+            ////Product
+            //var prod = new Product()
+            //{
+            //    ProductName = "Smsung S10",
+            //    Description = "Phone",
+            //    SupplierName = "Samsung"
+            //};
 
-            context.Products.Add(prod);
-            context.SaveChanges();
+            //context.Products.Add(prod);
+            //context.SaveChanges();
 
         }
     }

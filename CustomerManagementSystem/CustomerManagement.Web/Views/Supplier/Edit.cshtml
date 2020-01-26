@@ -1,0 +1,19 @@
+﻿@model CustomerManagement.Web.Models.Supplier
+
+<h1>Edit @ViewData["SupplierName"]</h1>
+
+<form method="post">
+    <input type="hidden" asp-for=@Model.Id value=@ViewData["Id"] />
+    <div class="form-group">
+        <label asp-for=@Model.SupplierName></label>
+        <input asp-for=@Model.SupplierName value=@ViewData["SupplierName"] />
+    </div>
+
+    <div class="form-group">
+        <label asp-for=@Model.Email></label>
+        <input asp-for=@Model.Email value=@ViewData["Email"] />
+    </div>
+
+    <input class="btn btn-default" type="submit" name="Update" value="Update" />
+
+</form>
