@@ -37,7 +37,7 @@ namespace CustomerManagement.Web.Data
             var result = from c in context.Customers
                          where (c.FirstName.Contains(search))
                          select c;
-            return result;
+            return result.ToList();
         }
 
         public Customer UpdateCustomer(Customer customer)
@@ -51,5 +51,14 @@ namespace CustomerManagement.Web.Data
         {
             return context.Suppliers.ToList();
         }
+        public IEnumerable<Department> GetDepartments()
+        {
+            return context.Departments.ToList();
+        }
+        public IEnumerable<Product> GetProducts()
+        {
+            return context.Products.ToList();
+        }
     }
+
 }

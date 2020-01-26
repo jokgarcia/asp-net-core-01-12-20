@@ -10,5 +10,7 @@ namespace CustomerManagement.Web.ViewModels
     {
       public IEnumerable<Customer> Customers { get; set; }
         public Customer Customer { get; set; }
+
+        public string SearchString { get; set; }
     }
 }

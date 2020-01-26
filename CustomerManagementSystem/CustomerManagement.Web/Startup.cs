@@ -72,7 +72,7 @@ namespace CustomerManagement.Web
             //    endpoints.MapRazorPages();
             //});
 
-            DBInitializer.Initialize(context);
+            //DBInitializer.Initialize(context);
         }
 
         private void ConfigureRoutes(IRouteBuilder routeBuilder)

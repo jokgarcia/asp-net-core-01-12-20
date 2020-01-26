@@ -33,6 +33,22 @@ namespace CustomerManagement.Web.Controllers
             return View(viewModel);
         }
 
+        [AllowAnonymous]
+        public IActionResult Index(CustomerViewModel customer)
+        {
+            var model = new CustomerViewModel();
+            //if (room.SearchString == "" || room.SearchString == null)
+            //{
+            //    model.Rooms = _reservationData.GetRooms();
+            //    model.GreetGuest = _greeter.GreetGuest();
+            //}
+            //else
+            //{
+            model.Customer = repositoryLayer.SearchCustomer(customer.SearchString);
+            //}
+            return View(model);
+        }
+
         [HttpGet]
         public IActionResult AddCustomer() 
         {
