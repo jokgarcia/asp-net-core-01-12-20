@@ -51,5 +51,33 @@ namespace CustomerManagement.Web.Data
         {
             return context.Suppliers.ToList();
         }
+
+        public Product AddProduct(Product product)
+        {
+            context.Products.Add(product);
+            context.SaveChanges();
+
+            return product;
+        }
+
+        public IEnumerable<Product> GetProducts()
+        {
+            return context.Products.ToList();
+        }
+
+        public IEnumerable<Product> SearchProduct(string search)
+        {
+            var result = from p in context.Products
+                         where (p.ProductName.Contains(search))
+                         select p;
+            return result;
+        }
+
+        public Product UpdateProduct(Product product)
+        {
+            context.Attach(product).State = EntityState.Modified;
+            context.SaveChanges();
+            return product;
+        }
     }
 }

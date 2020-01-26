@@ -11,5 +11,11 @@ namespace CustomerManagement.Web.Data
         Customer UpdateCustomer(Customer customer);
 
         IEnumerable<Supplier> GetSuppliers();
+
+
+        Product AddProduct(Product product);
+        IEnumerable<Product> GetProducts();
+        IEnumerable<Product> SearchProduct(string search);
+        Product UpdateProduct(Product product);
     }
 }
